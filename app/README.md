@@ -18,7 +18,6 @@
 - Animaciones
 - UnitTest y UITest
 
-
 ---
 
 ## Este App fue echa siguiendo los pasos del youtuber:
