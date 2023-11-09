@@ -16,10 +16,5 @@ class HoroscopeDetailViewModel @Inject constructor() : ViewModel() {
     val state: StateFlow<HoroscopeDetailState> = _state
 
 
-    init {
-
-    }
-
-
 
 }

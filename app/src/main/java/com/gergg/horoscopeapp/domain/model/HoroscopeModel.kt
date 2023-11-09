@@ -1,18 +1,16 @@
 package com.gergg.horoscopeapp.domain.model
 
 enum class HoroscopeModel {
-
     Aries,
-    Tauro,
-    Geminis,
+    Taurus,
+    Gemini,
     Cancer,
     Leo,
     Virgo,
     Libra,
-    Escorpio,
-    Sagitario,
-    Capricornio,
-    Acuario,
-    Piscis
-
+    Scorpio,
+    Sagittarius,
+    Capricorn,
+    Aquarius,
+    Pisces
 }

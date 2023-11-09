@@ -12,18 +12,17 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.gergg.horoscopeapp.databinding.FragmentHoroscopeBinding
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Acuario
+import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Aquarius
 import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Aries
 import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Cancer
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Capricornio
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Escorpio
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Geminis
+import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Capricorn
+import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Gemini
 import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Leo
 import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Libra
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Piscis
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Sagitario
-import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Tauro
+import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Pisces
+import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Sagittarius
+import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Scorpio
+import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Taurus
 import com.gergg.horoscopeapp.domain.model.HoroscopeInfo.Virgo
 import com.gergg.horoscopeapp.domain.model.HoroscopeModel
 import com.gergg.horoscopeapp.ui.horoscope.adapter.HoroscopeAdapter
@@ -49,19 +48,19 @@ class HoroscopeFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        horoscopeAdapter = HoroscopeAdapter() {
+        horoscopeAdapter = HoroscopeAdapter {
             val type = when (it) {
-                Acuario -> HoroscopeModel.Acuario
+                Aquarius -> HoroscopeModel.Aquarius
                 Aries -> HoroscopeModel.Aries
                 Cancer -> HoroscopeModel.Cancer
-                Capricornio -> HoroscopeModel.Capricornio
-                Escorpio -> HoroscopeModel.Escorpio
-                Geminis -> HoroscopeModel.Geminis
+                Capricorn -> HoroscopeModel.Capricorn
+                Scorpio -> HoroscopeModel.Scorpio
+                Gemini -> HoroscopeModel.Gemini
                 Leo -> HoroscopeModel.Leo
                 Libra -> HoroscopeModel.Libra
-                Piscis -> HoroscopeModel.Piscis
-                Sagitario -> HoroscopeModel.Sagitario
-                Tauro -> HoroscopeModel.Tauro
+                Pisces -> HoroscopeModel.Pisces
+                Sagittarius -> HoroscopeModel.Sagittarius
+                Taurus -> HoroscopeModel.Taurus
                 Virgo -> HoroscopeModel.Virgo
             }
 

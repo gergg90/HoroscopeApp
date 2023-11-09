@@ -10,18 +10,18 @@
 
 
     <!-- Zodiac-Name -->
-    <string name="aries">Aries</string>
-    <string name="tauro">Tauro</string>
-    <string name="geminis">Geminis</string>
-    <string name="cancer">Cancer</string>
-    <string name="leo">Leo</string>
-    <string name="virgo">Virgo</string>
-    <string name="libra">Libra</string>
-    <string name="escorpio">Escorpio</string>
-    <string name="sagitario">Sagitario</string>
-    <string name="capricornio">Capricornio </string>
-    <string name="acuario">Acuario</string>
-    <string name="piscis">Piscis</string>
+    <string name="Aquarius">Aquarius</string>
+    <string name="Pisces">Pisces</string>
+    <string name="Aries">Aries</string>
+    <string name="Taurus">Taurus</string>
+    <string name="Gemini">Gemini</string>
+    <string name="Cancer">Cancer</string>
+    <string name="Leo">Leo</string>
+    <string name="Virgo">Virgo</string>
+    <string name="Libra">Libra</string>
+    <string name="Scorpio">Scorpio</string>
+    <string name="Sagittarius">Sagittarius</string>
+    <string name="Capricorn">Capricorn</string>
 
 
 </resources>
