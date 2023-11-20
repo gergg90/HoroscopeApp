@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.DecelerateInterpolator
@@ -37,6 +38,15 @@ class LuckFragment : Fragment() {
         binding.ivRoulette.setOnClickListener {
             spinRoulette()
         }
+
+        binding.ivOnBackPressedLuck.setOnClickListener {
+            backToRoulette()
+        }
+    }
+
+    private fun backToRoulette() {
+        binding.preview.isVisible = true
+        binding.prediction.isVisible = false
     }
 
     private fun spinRoulette() {
@@ -69,8 +79,6 @@ class LuckFragment : Fragment() {
         })
 
         binding.ivReverse.startAnimation(slideUpAnimation)
-
-
     }
 
     private fun growCard() {
@@ -83,7 +91,36 @@ class LuckFragment : Fragment() {
             }
 
             override fun onAnimationEnd(animation: Animation?) {
+                binding.ivReverse.isVisible = false
+                showPremonitionView()
+            }
 
+            override fun onAnimationRepeat(animation: Animation?) {
+                showPreviewView()
+            }
+
+        })
+
+        binding.ivReverse.startAnimation(growAnimation)
+
+    }
+
+
+    private fun showPremonitionView() {
+        val disappearAnimation = AlphaAnimation(1.0f, 0.0f)
+        disappearAnimation.duration = 200
+
+        val appearAnimation = AlphaAnimation(0.0f, 1.0f)
+        appearAnimation.duration = 1000
+
+        disappearAnimation.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animation?) {
+                binding.preview.isVisible = false
+                binding.prediction.isVisible = true
             }
 
             override fun onAnimationRepeat(animation: Animation?) {
@@ -92,9 +129,40 @@ class LuckFragment : Fragment() {
 
         })
 
-        binding.ivReverse.startAnimation(growAnimation)
+        binding.preview.startAnimation(disappearAnimation)
+        binding.prediction.startAnimation(appearAnimation)
 
     }
+
+    private fun showPreviewView() {
+
+        val disappearAnimation = AlphaAnimation(1.0f, 0.0f)
+        disappearAnimation.duration = 200
+
+        val appearAnimation = AlphaAnimation(0.0f, 1.0f)
+        appearAnimation.duration = 1000
+
+        disappearAnimation.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animation?) {
+                binding.preview.isVisible = false
+                binding.prediction.isVisible = true
+            }
+
+            override fun onAnimationRepeat(animation: Animation?) {
+
+            }
+
+        })
+
+        binding.preview.startAnimation(disappearAnimation)
+        binding.prediction.startAnimation(appearAnimation)
+
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

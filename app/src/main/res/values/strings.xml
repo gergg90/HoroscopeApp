@@ -23,5 +23,9 @@
     <string name="sagittarius">Sagittarius</string>
     <string name="capricorn">Capricorn</string>
 
+    <!-- Luck -->
+    <string name="share">Share</string>
+
+
 
 </resources>
