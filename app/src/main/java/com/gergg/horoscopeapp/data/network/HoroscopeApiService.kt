@@ -3,7 +3,6 @@ package com.gergg.horoscopeapp.data.network
 import com.gergg.horoscopeapp.data.network.response.PredictionResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 
 interface HoroscopeApiService {

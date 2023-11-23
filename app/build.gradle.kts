@@ -33,7 +33,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"https://newastro.vercel.app/\"")
         }
 
-        getByName("debug"){
+        getByName("debug") {
             isDebuggable = true
             resValue("string", "gerggname", "[DEBUG]HoroscopeApp")
             buildConfigField("String", "BASE_URL", "\"https://newastro.vercel.app/\"")
@@ -60,19 +60,28 @@ android {
 dependencies {
 
     //Navigation Component
-    val navigationComponent = "2.7.5"
-    implementation("androidx.navigation:navigation-fragment-ktx:$navigationComponent")
-    implementation("androidx.navigation:navigation-ui-ktx:$navigationComponent")
+    val navigationComponentVersion = "2.7.5"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navigationComponentVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navigationComponentVersion")
 
     //Daggerhilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    val daggerHiltVersion = "2.48"
+    implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
 
     //Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    val retrofitVersion = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0") // Interceptor Retrofit
 
+    //Camera X
+    val camerax_version = "1.3.0"
+    implementation ("androidx.camera:camera-core:${camerax_version}")
+    implementation ("androidx.camera:camera-camera2:${camerax_version}")
+    implementation ("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation ("androidx.camera:camera-view:${camerax_version}")
+    implementation ("androidx.camera:camera-extensions:${camerax_version}")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
